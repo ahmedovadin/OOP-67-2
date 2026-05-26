@@ -1,0 +1,14 @@
+Команды для регистрации вашиз данных
+git config --global user.name "Your name"
+git config --global user.email "your-email@wxample.com"
+
+Кмоанды только для одного проекта
+1) Это команды для инициализации Git в вашем новом проекте, пишется в один раз в начале после создания
+
+git init
+
+2) Это команда вставит вашу ссылку на ваш репозиторий
+
+git remote add origin Link
+
+git add .
