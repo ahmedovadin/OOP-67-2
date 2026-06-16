@@ -3,3 +3,4 @@ venv
 .venv
 __pycache__
 GitHelp.txt
+my_venv
