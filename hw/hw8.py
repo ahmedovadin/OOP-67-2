@@ -23,7 +23,7 @@ cursor.execute('''
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         user_id  INTEGER NOT NULL,
         movie_id  INTEGER NOT NULL,
-        rating FLOAT NOT NULL,
+        rating INTEGER NOT NULL,
         FOREIGN KEY (user_id) REFERENCES users(id),
         FOREIGN KEY (movie_id) REFERENCES movies(id)
     )
@@ -53,7 +53,8 @@ def create_movies():
         ('The Lord of the Rings', 'epic fantasy'),
         ('Aquaman', 'action, adventure, fantasy'),
         ('Forest Gump', 'comedy-drama'),
-        ('Avatar', 'action')
+        ('Avatar', 'action'),
+        ('Inception', 'science-fantasy')
     ]
     cursor.executemany(
         'INSERT INTO movies(title, genre) VALUES(?, ?)',
@@ -132,3 +133,5 @@ def show_aggregation():
     print(f'Минимальная оценка: {mn}')
 
 show_aggregation()
+
+connect.close()
